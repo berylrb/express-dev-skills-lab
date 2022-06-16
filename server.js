@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url'
 import logger from 'morgan'
 import methodOverride from 'method-override'
 import('./config/database.js')
-import { skills } from './data/skill-data.js'
+// import { skills } from './data/skill-data.js'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
@@ -26,12 +26,6 @@ app.set('view engine', 'ejs')
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(
-  express.static(
-    path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
-  )
-)
-
 app.use(
   express.static(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')

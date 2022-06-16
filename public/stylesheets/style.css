@@ -11,13 +11,11 @@ a {
   display: inline-block;
   margin-right: 10px;
 }
-
+	
 .delete-form button {
   color: red;
 }
-
-li{
+	
+li {
   list-style: none;
-  display:inline;
 }
-
