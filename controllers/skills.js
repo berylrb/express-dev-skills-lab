@@ -73,13 +73,14 @@ function update(req, res) {
   req.body.has = !!req.body.has
   Skill.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(skill => {
-    res.redirect(`/skills${skill._id}`)
+    res.redirect(`/skills/${skill._id}`)
   })
   .catch(error => {
     console.log(error)
     res.redirect('/skills')
   })
 }
+
 
 export {
   index,

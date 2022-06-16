@@ -7,12 +7,16 @@
   <title>Skills</title>
 </head>
 <body>
+  <h1>Skills list</h1>
   <ul>
     <% skills.forEach(skill => { %>
       <li>
-        <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+        <form action="'/skills/<%= skill._id %>?_method=DELETE" class="delete-form" method="POST">
+          <button type="submit">X</button>
+        </form>
+        <a href="/skills/<%= skill._id %>"><%= skill.skill %></a>
         -
-        <%= skill.level ? 'high' : 'not high' %> 
+        <%= skill.has ? true : false %> 
       </li>
     <% }) %>
   </ul>

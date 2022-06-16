@@ -11,7 +11,7 @@
   <a href="/skills/<%= skill._id %>/edit">Edit</a>
   <h2>Skill #<%= skill.id %></h2>
   <h3><%= skill.skill %></h3>
-  <p>Skilled? <%= skill.level ? 'High' : 'Not High' %> </p>
+  <p>Skilled? <%= skill.has ? true : false %> </p>
   <a href="/skills">Go back, you fool!</a>
 </body>
 </html>
