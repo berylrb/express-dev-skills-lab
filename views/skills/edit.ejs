@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +15,17 @@
   <form action="/skills/<%= skill._id %>?_method=PUT" method="POST" autocomplete="off">
     <input value="<%= skill.skill %>" type="text" name="skill">
     <input type="checkbox" <%= skill.has ? 'checked' : '' %> name="has">has skill?<br>
-    <button type="submit">Update Skill</button>
+    <form action="#">
+      <label for="instructor">Instructor</label>
+      <select name="instructor" id="instructor">
+        <option value="ben">Ben</option>
+        <option value="david">David</option>
+        <option value="ian">Ian</option>
+        <option value="hunter">Hunter</option>
+        <option value="joe">Joe</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
   </form><br>
   <a href="/skills/<%= skill._id %>">Cancel</a>
 </body>
