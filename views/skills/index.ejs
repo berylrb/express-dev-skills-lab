@@ -10,11 +10,9 @@
   <ul>
     <% skills.forEach(skill => { %>
       <li>
-        <%= skill.student %> 
+        <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
         -
-        <%= skill.skill %> 
-        -
-        <%= skill.level ? 'not high' : 'high' %> 
+        <%= skill.level ? 'high' : 'not high' %> 
       </li>
     <% }) %>
   </ul>

@@ -1,9 +1,9 @@
 const skills = [
-  {student: 'Jordin', skill: 'poptart flavor creation', level: 'high'},
-  {student: 'Scott', skill: 'emu herding', level: 'high'},
-  {student: 'Beryl', skill: 'being a marshmallow', level: 'high'},
-  {student: 'Past David', skill: 'levitation', level: 'not high'},
-  {student: 'Jake', skill: 'eating pringles', level: 'high'}
+  {skill: 'poptart flavor creation', level: 'high'},
+  {skill: 'emu herding', level: 'high'},
+  {skill: 'being a marshmallow', level: 'high'},
+  {skill: 'levitation', level: 'not high'},
+  {skill: 'eating pringles', level: 'not high'}
 ]
 
 export {
