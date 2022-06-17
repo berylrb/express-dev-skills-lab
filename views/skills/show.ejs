@@ -13,9 +13,14 @@
 <body>
   <h1>Skills</h1>
   <a href="/skills/<%= skill._id %>/edit">Edit</a>
-  <h2>Skill #<%= skill.id %></h2>
-  <h3><%= skill.skill %></h3>
-  <p>Skilled? <%= skill.has ? true : false %> </p>
+  <h2><%= skill.instructor %>'s skills</h2>
+  <% skill.abilities.forEach(ability => { %>
+    <p> <%= ability %> </p>
+  <% }) %>
+  <form action="/skills/<%= skill._id %>/ability" method="POST">
+    <input type="text" placeholder="ability" name="ability">
+    <button type="submit">add me</button>
+  </form>
   <a href="/skills">Go back, you fool!</a>
 </body>
 </html>

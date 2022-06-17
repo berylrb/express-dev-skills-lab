@@ -18,7 +18,7 @@
         <form action="/skills/<%= skill._id %>?_method=DELETE" class="delete-form" method="POST">
           <button type="submit">X</button>
         </form>
-        <a href="/skills/<%= skill._id %>"><%= skill.skill %></a>
+        <a href="/skills/<%= skill._id %>"><%= skill.instructor %></a>
         -
         <%= skill.instructor %> 
         -
@@ -29,3 +29,17 @@
   <a href="/skills/new">Add stuff</a>
 </body>
 </html>
+
+
+<!-- <li>
+  <form action="/skills/<%# skill._id %>?_method=DELETE" class="delete-form" method="POST">
+    <button type="submit">X</button>
+  </form>
+  <a href="/skills/<%# skill._id %>"><%# skill.skill %></a>
+  -
+  <%# skill.instructor %> 
+  -
+  <%# skill.has ? true : false %> 
+</li>
+<%# }) %>
+</ul> -->

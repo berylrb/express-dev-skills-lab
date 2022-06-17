@@ -81,6 +81,20 @@ function update(req, res) {
   })
 }
 
+function createAbility(req, res) {
+  Skill.findById(req.params.id)
+  .then(skill => {
+    skill.abilities.push(req.body.ability)
+    skill.save()
+    .then(() => {
+      res.redirect(`/skills/${skill._id}`)
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/skills')
+  })
+}
 
 export {
   index,
@@ -89,6 +103,7 @@ export {
   show,
   deleteSkill as delete,
   edit,
-  update
+  update,
+  createAbility
 }
 
